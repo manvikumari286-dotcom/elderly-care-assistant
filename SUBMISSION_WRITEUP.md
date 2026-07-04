@@ -1,5 +1,7 @@
 # Submission Writeup — Elderly Care Assistant
 
+![Cover Page Banner](assets/cover_page_banner.png)
+
 ## 1. Problem Statement
 
 Elderly individuals frequently manage complex, multi-medication schedules, which increases the risk of missed doses, incorrect dosages, and dangerous drug-drug interactions. Additionally, coordinating numerous doctor appointments, noting doctor specialties, and keeping track of clinic locations poses a heavy cognitive load for senior patients and a coordination challenge for their caregivers. 
@@ -11,6 +13,8 @@ The **Elderly Care Assistant** addresses this real-world need by providing a gen
 ## 2. Solution Architecture
 
 The agent is designed as a graph-based multi-agent system built using the Google Agent Development Kit (ADK) 2.0.
+
+![Architecture Diagram](assets/architecture_diagram.png)
 
 ```mermaid
 graph TD

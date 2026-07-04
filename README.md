@@ -1,5 +1,7 @@
 # Elderly Care Assistant
 
+![Cover Page Banner](assets/cover_page_banner.png)
+
 The **Elderly Care Assistant** is an intelligent, secure, and warm conversational assistant designed to help elderly individuals or their caregivers manage medication schedules, track taken doses, and coordinate doctor visits. It uses a graph-based multi-agent workflow to guarantee safety, verification, and reliable data management.
 
 ## Prerequisites
@@ -98,8 +100,12 @@ Here are three concrete test cases to verify the capabilities of the agent:
 ## Assets
 
 This project includes visual submission assets located in the `assets/` directory:
-- **Architecture Diagram:** [assets/architecture_diagram.png](file:///c:/Users/lenovo/Desktop/ai_agents%20workspace/elderly-care-assistant/assets/architecture_diagram.png)
-- **Cover Page Banner:** [assets/cover_page_banner.png](file:///c:/Users/lenovo/Desktop/ai_agents%20workspace/elderly-care-assistant/assets/cover_page_banner.png)
+
+### Cover Page Banner
+![Cover Page Banner](assets/cover_page_banner.png)
+
+### Architecture Diagram
+![Architecture Diagram](assets/architecture_diagram.png)
 
 ---
 
