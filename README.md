@@ -35,43 +35,6 @@ Before starting, ensure you have the following installed on your system:
 
 ---
 
-![Cover Page Banner](assets/cover_page_banner.png)
-
-## Architecture Diagram
-
-```mermaid
-graph TD
-    START[User Input] --> SC[Security Checkpoint]
-    
-    SC -- "safe" --> ORCH[Orchestrator Agent]
-    SC -- "security_violation / emergency" --> SVH[Security Violation Handler]
-    
-    ORCH -- "Delegate Medication Query" --> MA[Medication Agent]
-    ORCH -- "Delegate Appointment Query" --> AA[Appointment Agent]
-    
-    MA --> MCP[MCP Server Tools]
-    AA --> MCP
-    
-    ORCH --> RPO[Post-Orchestrator Router]
-    
-    RPO -- "needs_confirmation (pending appointment)" --> AC[Caregiver Confirmation / HITL]
-    RPO -- "direct_output" --> FO[Final Output Node]
-    
-    AC --> FO
-    SVH --> FO
-    
-    FO --> END[User Display]
-
-    subgraph MCP Server [MCP Server Tools]
-        list_medications
-        add_medication
-        log_medication_taken
-        list_appointments
-        schedule_doctor_visit
-        confirm_pending_appointment
-    end
-```
-
 ---
 
 ## How to Run & Verify
@@ -100,12 +63,8 @@ Here are three concrete test cases to verify the capabilities of the agent:
 ## Assets
 
 This project includes visual submission assets located in the `assets/` directory:
-
-### Cover Page Banner
-![Cover Page Banner](assets/cover_page_banner.png)
-
-### Architecture Diagram
-![Architecture Diagram](assets/architecture_diagram.png)
+- **Architecture Diagram:** [assets/architecture_diagram.png](file:///c:/Users/lenovo/Desktop/ai_agents%20workspace/elderly-care-assistant/assets/architecture_diagram.png)
+- **Cover Page Banner:** [assets/cover_page_banner.png](file:///c:/Users/lenovo/Desktop/ai_agents%20workspace/elderly-care-assistant/assets/cover_page_banner.png)
 
 ---
 
