@@ -61,8 +61,12 @@ Here are three concrete test cases to verify the capabilities of the agent:
 ## Assets
 
 This project includes visual submission assets located in the `assets/` directory:
-- **Architecture Diagram:** [assets/architecture_diagram.png](file:///c:/Users/lenovo/Desktop/ai_agents%20workspace/elderly-care-assistant/assets/architecture_diagram.png)
-- **Cover Page Banner:** [assets/cover_page_banner.png](file:///c:/Users/lenovo/Desktop/ai_agents%20workspace/elderly-care-assistant/assets/cover_page_banner.png)
+
+### Cover Page Banner
+![Cover Page Banner](assets/cover_page_banner.png)
+
+### Architecture Diagram
+![Architecture Diagram](assets/architecture_diagram.png)
 
 ---
 
