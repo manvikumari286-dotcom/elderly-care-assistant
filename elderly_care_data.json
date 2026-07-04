@@ -1,0 +1,11 @@
+{
+  "medications": [
+    {"name": "Aspirin", "dosage": "81mg", "schedule": "Once daily in the morning"},
+    {"name": "Metformin", "dosage": "500mg", "schedule": "Twice daily with meals"},
+    {"name": "Lisinopril", "dosage": "10mg", "schedule": "daily at 8:00AM"}
+  ],
+  "medication_logs": [],
+  "appointments": [
+    {"doctor": "Dr. Davis", "specialty": "Cardiologist", "date": "2026-07-15", "time": "10:00 AM", "location": "Heart Clinic Suite 300", "status": "Confirmed"}
+  ]
+}

@@ -1,0 +1,18 @@
+metrics_to_run:
+  - custom_response_quality
+
+custom_metrics:
+  # Default: local LLM-as-judge defined in metrics.py (a real, lintable/testable
+  # module) rather than an inline blob. It runs in-process via google-genai, so it
+  # grades on BOTH Vertex (ADC) and Google AI Studio (GEMINI_API_KEY) with no
+  # managed Vertex eval service -- genai.Client() auto-selects the backend from the
+  # project's .env (loaded by `eval grade`). It uses each case's `reference` (ground
+  # truth) when present. To use the managed Vertex eval service instead (rubric
+  # LLMMetric; needs a GCP project), see the eval skill's metrics-guide.
+  - name: custom_response_quality
+    custom_function_file: metrics.py
+  - name: agent_turn_count
+    custom_function: |
+      def evaluate(instance):
+          turns = (instance.get("agent_data") or {}).get("turns", [])
+          return {'score': len(turns)}

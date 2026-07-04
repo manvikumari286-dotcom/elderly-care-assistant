@@ -1,0 +1,39 @@
+[0:00 — HOOK]
+Hello everyone. As our parents and grandparents age, managing health tracking and coordinating medical care can become overwhelming for them, and stressful for their families. Today, I'm excited to present the Elderly Care Assistant, an intelligent companion designed to make health coordination simple for seniors and secure for their caregivers.
+
+(pause)
+
+[0:20 — WHAT IT IS]
+The Elderly Care Assistant is built as a Concierge Agent using Google's Agent Development Kit 2.0. It provides a warm, respectful conversational interface that tracks medication schedules, logs completed doses, and coordinates doctor visits, bridging the gap between independent seniors and their remote family caregivers.
+
+(pause)
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+As you can see on the screen, this project acts as an automated, secure, and intelligent guardian, allowing seniors to check and update their health logs simply by chatting.
+
+(pause)
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png)
+Let's look at the underlying architecture. When a user sends a message, it is processed first by the Security Checkpoint node, which screens for prompt injections, redacts sensitive personal data like phone numbers, and checks for medical emergencies. If it's safe, the workflow passes control to the main Orchestrator Agent. The Orchestrator uses AgentTools to delegate tasks to either the specialized Medication Agent or the Doctor Visit Coordinator Agent. These sub-agents retrieve and update records using our Model Context Protocol, or MCP, server. Finally, if a doctor visit is scheduled, the workflow intercepts the flow and routes it to the Caregiver Confirmation node, pausing for caregiver approval before the final output is finalized.
+
+(pause)
+
+[2:00 — LIVE DEMO]
+(switch to playground at localhost:18081)
+Let's see it in action. First, let's look at Test Case 1: logging a taken medication. A senior can type "I just took my Aspirin dose." The orchestrator hands this to the Medication Agent, which automatically calls the log_medication_taken tool on our MCP server. The agent responds: "Logged that Aspirin was taken just now."
+
+Next, let's look at Test Case 2, which showcases our Human-in-the-Loop flow. The user says: "Schedule an appointment with Dr. Robert, cardiologist, for next Tuesday at 3 PM at Central Clinic." The Appointment Agent schedules this as "Pending." Our workflow detects this pending status and initiates the caregiver confirmation gate. In the UI, the caregiver is prompted: "Caregiver Verification Required: Please confirm scheduling doctor visit with Dr. Robert?" If the caregiver types "Yes," the database updates the status to "Confirmed" and completes the interaction.
+
+Finally, Test Case 3 shows our emergency safety guardrail. If a senior writes "I have chest pain and difficulty breathing," the Security Checkpoint catches these critical emergency keywords immediately, bypasses the LLM entirely, and responds with a prominent emergency alert advising them to call 911 immediately.
+
+(pause)
+
+[3:00 — SECURITY & MCP]
+To make this possible, our custom MCP server implements a local JSON database containing all medications, dose logs, and appointments. The security node acts as a strict gateway, writing structured JSON audit logs for every request to ensure accountability and monitor potential issues.
+
+(pause)
+
+[3:30 — IMPACT / CLOSE]
+Ultimately, the Elderly Care Assistant provides peace of mind. Seniors get an easy-to-use health log, and caregivers maintain necessary supervision over vital doctor visits and scheduling. Thank you for your time, and I am ready to take any questions.
