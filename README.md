@@ -1,7 +1,5 @@
 # Elderly Care Assistant
 
-![Cover Page Banner](assets/cover_page_banner.png)
-
 The **Elderly Care Assistant** is an intelligent, secure, and warm conversational assistant designed to help elderly individuals or their caregivers manage medication schedules, track taken doses, and coordinate doctor visits. It uses a graph-based multi-agent workflow to guarantee safety, verification, and reliable data management.
 
 ## Prerequisites
@@ -36,6 +34,8 @@ Before starting, ensure you have the following installed on your system:
    Access the server at **http://localhost:8000**
 
 ---
+
+![Cover Page Banner](assets/cover_page_banner.png)
 
 ## Architecture Diagram
 
