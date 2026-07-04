@@ -35,8 +35,6 @@ Before starting, ensure you have the following installed on your system:
 
 ---
 
----
-
 ## How to Run & Verify
 
 ### Sample Test Cases
